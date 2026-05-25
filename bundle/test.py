@@ -1,4 +1,4 @@
 def say_hi(name):
-    return f"hi {name}"
+    return f"hi {name}!"
 
-say_hi("John")
+say_hi("Francesco")

@@ -17,6 +17,7 @@ jobs:
         uses: databricks/setup-cli@main
 
       - name: Deploy Asset Bundle to Prod
+        working-directory: ./DABs_test
         run: |
           databricks bundle deploy --target prod
         env:
