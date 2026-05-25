@@ -1,0 +1,31 @@
+bundle:
+  name: my_dabs_project
+
+variables:
+  catalog:
+    description: Unity Catalog name
+    default: main
+  schema:
+    description: Schema name
+    default: default
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: ${var.databricks_host}
+    variables:
+      catalog: dev_catalog
+      schema: dev_schema
+
+  prod:
+    mode: production
+    workspace:
+      host: ${var.databricks_host}
+    variables:
+      catalog: prod_catalog
+      schema: prod_schema

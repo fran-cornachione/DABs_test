@@ -1,0 +1,21 @@
+# Databricks
+.databricks/
+dist/
+*.egg-info/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Tests
+.pytest_cache/
+htmlcov/
+.coverage
