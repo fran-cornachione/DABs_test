@@ -1,4 +1,4 @@
-def say_hi(name):
-    return f"hi {name}!"
+def product(a, b):
+    return a * b
 
-say_hi("Francesco")
+print(product(2, 2))
