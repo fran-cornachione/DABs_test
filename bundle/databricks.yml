@@ -16,12 +16,8 @@ targets:
 
   # The 'prod' target, used for production deployment.
   prod:
-    mode: production
+    mode: development
     workspace:
       host: https://dbc-c7734eac-73e7.cloud.databricks.com
       # We always use /Users/cornachofrance@gmail.com for all resources to make sure we only have a single copy.
       root_path: /Users/cornachofrance@gmail.com/.bundle/${bundle.name}/${bundle.target}
-    run_as:
-      # This runs as cornachofrance@gmail.com in production. We could also use a service principal here,
-      # see https://docs.databricks.com/dev-tools/bundles/permissions.html.
-      user_name: cornachofrance@gmail.com
